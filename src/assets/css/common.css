@@ -1,0 +1,8 @@
+:root {
+  --primary-color:#ff9864;
+  --van-tabbar-item-icon-size:30px;
+}
+
+body {
+  font-size: 14px;
+}
