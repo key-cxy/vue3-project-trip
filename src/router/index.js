@@ -25,6 +25,30 @@ const  routes = [
         path:'/order',
         component: () =>  import("../views/order/order.vue") 
     },
+    {
+        name:'city',
+        path:'/city',
+        component: () =>  import("../views/city/city.vue"),
+        meta:{
+            hideTabbar:true
+        } 
+    },
+    {
+        name:'search',
+        path:'/search',
+        component: () =>  import("../views/search/search.vue"),
+        meta:{
+            hideTabbar:true
+        } 
+    },
+    {
+        name:'detail',
+        path:'/detail/:id',
+        component: () =>  import("../views/detail/detail.vue"),
+        meta:{
+            hideTabbar:true
+        } 
+    },
 ]
 
 const router = createRouter({

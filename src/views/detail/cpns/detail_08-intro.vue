@@ -1,0 +1,39 @@
+<script setup>
+import DetailSection from "@/components/detail-section/detail-section.vue";
+
+const props = defineProps({
+  detailIntro: {
+    type: Object,
+    default: () => ({}),
+  },
+});
+</script>
+
+<template>
+   <div class="intro">
+    <h2 class="title">{{ detailIntro.title }}</h2>
+    <div class="content">
+      {{ detailIntro.introduction }}
+    </div>
+  </div>
+</template>
+
+<style lang="less" scoped>
+.intro {
+  padding: 16px 12px;
+  border-top: 5px solid #f2f3f4;
+
+  .title {
+    font-size: 14px;
+    color: #000;
+    font-weight: 700;
+  }
+
+  .content {
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #666;
+  }
+}
+</style>

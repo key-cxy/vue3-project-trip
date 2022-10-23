@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>currentVal: <span class="currentVal"></span> </h1>
+    <button class="btn">随机数</button>
+    <script>
+        // 1.定义的数组
+        var values = [100, 300, 500, 800, 1000]
+        // 监听按钮的迪纳基
+        const btnEl = document.querySelector('.btn')
+        btnEl.onclick = function () {
+            let currentVal = Math.floor(Math.random() * 1500)
+            console.log(currentVal);
+            mathIndex(currentVal);
+        }
+
+        function mathIndex(currentVal) {
+            let currentIndex = values.length - 1
+            for (let i = 0; i < values.length; i++) {
+                if (values[i] > currentVal) {
+                    currentIndex = i - 1
+                    break
+                }
+            }
+
+        document.querySelector('.currentVal').innerHTML = currentIndex
+
+            if(currentIndex === -1) return 
+
+            console.log(currentIndex);
+        }
+
+
+    </script>
+</body>
+
+</html>

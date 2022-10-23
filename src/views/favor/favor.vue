@@ -8,4 +8,8 @@
     </div>
 </template>
 
-<style lang="less" scoped></style>
+<style lang="less" scoped>
+.favor {
+    height: 300px;
+}
+</style>
